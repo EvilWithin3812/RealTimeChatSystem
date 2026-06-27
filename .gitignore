@@ -1,0 +1,27 @@
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+backend.err.log
+backend.out.log
+frontend.err.log
+frontend.out.log
+
+# Uploads and local runtime data
+BACKEND/uploads/
+chrome-smoke-profile/
+
+# Build output
+FRONTEND/vite-project/dist/
+
+# Dependencies
+node_modules/
+BACKEND/node_modules/
+FRONTEND/vite-project/node_modules/
+
+# Editor/system files
+.vscode/
+.DS_Store

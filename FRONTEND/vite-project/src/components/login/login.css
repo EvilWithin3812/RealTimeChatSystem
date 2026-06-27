@@ -1,0 +1,54 @@
+.login h1 {
+    margin: 10px 0 8px;
+    font-size: clamp(2.4rem, 9vw, 4.8rem);
+    line-height: 0.95;
+    color: var(--text);
+}
+
+.login form {
+    display: grid;
+    gap: 16px;
+}
+
+.login .mb-3 {
+    display: grid;
+    gap: 7px;
+    margin: 0;
+}
+
+.login label {
+    color: var(--muted);
+    font-size: 0.88rem;
+    font-weight: 800;
+}
+
+.login input {
+    width: 100%;
+    border: 1px solid var(--line);
+    background: var(--panel-soft);
+    color: var(--text);
+    border-radius: 8px;
+    padding: 13px 14px;
+    outline: none;
+}
+
+.login input:focus {
+    border-color: var(--teal);
+    box-shadow: 0 0 0 4px color-mix(in srgb, var(--teal) 22%, transparent);
+}
+
+.login .btn {
+    width: 100%;
+    min-height: 48px;
+    border: 0;
+    border-radius: 8px;
+    background: linear-gradient(135deg, var(--accent), var(--teal));
+    color: white;
+    cursor: pointer;
+    font-weight: 900;
+}
+
+.login .btn:hover {
+    filter: brightness(1.04);
+    transform: translateY(-1px);
+}

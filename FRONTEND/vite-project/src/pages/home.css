@@ -1,0 +1,16 @@
+.home {
+    display: flex;
+    min-height: 100vh;
+    padding-left: 100px;
+    background:
+        linear-gradient(90deg, color-mix(in srgb, var(--teal) 10%, transparent), transparent 34%),
+        var(--bg);
+    overflow: hidden;
+}
+
+@media (max-width: 720px) {
+    .home {
+        padding-left: 0;
+        padding-bottom: 78px;
+    }
+}

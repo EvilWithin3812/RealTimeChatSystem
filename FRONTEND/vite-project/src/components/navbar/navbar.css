@@ -1,0 +1,115 @@
+.sidebar {
+    width: 72px;
+    height: calc(100% - 28px);
+    position: fixed;
+    top: 14px;
+    left: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 10px;
+    transition: background-color 0.25s ease, color 0.25s ease;
+    z-index: 1000;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+  }
+
+  .sidebar.bright {
+    background-color: color-mix(in srgb, var(--panel) 92%, transparent);
+    color: var(--text);
+  }
+
+  .sidebar.dark {
+    background-color: color-mix(in srgb, var(--panel) 92%, transparent);
+    color: var(--text);
+  }
+  
+
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: grid;
+    gap: 10px;
+  }
+  
+  .sidebar ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+    border-radius: 8px;
+    color: var(--muted);
+  }
+  
+  .sidebar ul li:hover {
+    background-color: var(--panel-soft);
+    color: var(--accent);
+    transform: translateY(-1px);
+  }
+  
+  .sidebar ul li svg {
+    font-size: 1.28rem;
+  }
+
+
+  .mode-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: var(--text);
+    color: var(--bg);
+    transition: transform 0.2s ease, filter 0.2s ease;
+  }
+  
+  .sidebar.bright .mode-toggle {
+    background-color: var(--text);
+    color: var(--bg);
+  }
+  
+  .mode-toggle svg {
+    margin: 0;
+  }
+  
+  .mode-toggle:hover {
+    filter: brightness(1.08);
+    transform: translateY(-1px);
+  }
+
+@media (max-width: 720px) {
+  .sidebar {
+    width: calc(100% - 24px);
+    height: 62px;
+    top: auto;
+    bottom: 12px;
+    left: 12px;
+    flex-direction: row;
+    padding: 7px 10px;
+  }
+
+  .sidebar ul {
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    width: auto;
+    flex: 1;
+  }
+
+  .sidebar ul li,
+  .mode-toggle {
+    width: 44px;
+    height: 44px;
+  }
+}
+  
